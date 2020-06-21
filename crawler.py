@@ -226,15 +226,14 @@ class Leetcode:
                         if question_content['translatedContent'] is None: continue
                         src = CODE_TEMPLATE.format(code=src)
                         question_id = question_["question_id"]
-                        dir_name = "n{}. {}".format(question_id, question_["question_title"])
+                        dir_name = "{}. {}".format(question_id, question_["question_title"])
                         if len(question_id) ==1:
                             dir_name = '000' + dir_name
                         if len(question_id) ==2:
                             dir_name = '00' + dir_name
                         if len(question_id) ==3:
                             dir_name = '0' + dir_name
-                        if len(question_id) ==4:
-                            dir_name = '' + dir_name
+                        dir_name = 'n' + dir_name
 
                         if not os.path.exists(dir_name):
                             os.mkdir(dir_name)
@@ -273,13 +272,13 @@ class Leetcode:
 
     def get_cached_solved_ques(self):
         #if not os.environ.get('CACHED_SOLVED_QUES'): return
-        pattern_name = re.compile('n(\d+)\. (.*)')
+        pattern_name = re.compile('n(.*)\. (.*)')
         for dir_name in os.listdir('.'):
             if not pattern_name.match(dir_name): continue
             self.cached_solved_quest[pattern_name.search(dir_name).group(2)] = True
 
     def __generate_readme(self):
-        pattern_name = re.compile('n(\d+)\. (.*)')
+        pattern_name = re.compile('n(.*)\. (.*)')
         question_level = {
             1: 0, 2: 0, 3: 0
         }
