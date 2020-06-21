@@ -46,7 +46,7 @@ class Leetcode:
     SIGN_IN_URL = LEETCODE_URL + '/accounts/login/'
     LEETCODE_LIST_URL = 'https://leetcode-cn.com/api/problems/all/'
     LEETCODE_GRAPHQL = 'https://leetcode-cn.com/graphql'
-    REPO_URL = 'https://github.com/netcan/Leetcode-Rust'
+    REPO_URL = 'https://github.com/konglhui/Leetcode'
     
     def __init__(self):
         self.user_agent = r'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'
