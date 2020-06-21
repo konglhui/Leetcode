@@ -226,15 +226,15 @@ class Leetcode:
                         if question_content['translatedContent'] is None: continue
                         src = CODE_TEMPLATE.format(code=src)
                         question_id = question_["question_id"]
-                        dir_name = "{}. {}".format(question_id, question_["question_title"])
+                        dir_name = "n{}. {}".format(question_id, question_["question_title"])
                         if len(question_id) ==1:
-                            dir_name = 'n000' + dir_name
+                            dir_name = '000' + dir_name
                         if len(question_id) ==2:
-                            dir_name = 'n00' + dir_name
+                            dir_name = '00' + dir_name
                         if len(question_id) ==3:
-                            dir_name = 'n0' + dir_name
+                            dir_name = '0' + dir_name
                         if len(question_id) ==4:
-                            dir_name = 'n' + dir_name
+                            dir_name = '' + dir_name
 
                         if not os.path.exists(dir_name):
                             os.mkdir(dir_name)
