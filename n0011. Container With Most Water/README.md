@@ -23,8 +23,7 @@
 
 ## ½â·¨
 ```cpp
-// Author: Netcan @ https://github.com/netcan/Leetcode-Rust
-// Zhihu: https://www.zhihu.com/people/netcan
+// Author: klinghui @ https://github.com/konglhui/Leetcode
 
 	inline int TwoMin(int& a,int& b)
 	{

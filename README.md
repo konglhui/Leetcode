@@ -1,7 +1,8 @@
 
-## Leetcode-Rust
-本项目记录我的Rust刷题经验，也是学习Rust的过程。
-本项目由`crawler.py`生成，代码自动爬取Leetcode-cn.com网站获取个人提交记录。使用方法：登陆Leetcode后记录cookie，设置环境变量`LEETCODE_COOKIE`，然后执行本脚本就能抓取指定语言的个人提交记录。
+## Leetcode-kLingHui
+本项目记录我的刷题过程。
+本项目由`crawler.py`生成，源代码在 https://github.com/netcan/Leetcode-Rust/crawler.py
+代码自动爬取Leetcode-cn.com网站获取个人提交记录。使用方法：设置config.json，添加账号密码。
 目前已解决的题目（33 个，其中简单24 个，中等9 个， 困难0 个）：
 - [1. Two Sum :star:](https://github.com/netcan/Leetcode-Rust/tree/master/n0001.%20Two%20Sum)
 - [2. Add Two Numbers :star::star:](https://github.com/netcan/Leetcode-Rust/tree/master/n0002.%20Add%20Two%20Numbers)

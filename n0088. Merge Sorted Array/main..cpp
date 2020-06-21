@@ -1,5 +1,4 @@
-// Author: Netcan @ https://github.com/netcan/Leetcode-Rust
-// Zhihu: https://www.zhihu.com/people/netcan
+// Author: klinghui @ https://github.com/konglhui/Leetcode
 class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {

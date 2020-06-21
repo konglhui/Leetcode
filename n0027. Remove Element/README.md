@@ -54,8 +54,7 @@ for (int i = 0; i < len; i++) {
 
 ## ½â·¨
 ```cpp
-// Author: Netcan @ https://github.com/netcan/Leetcode-Rust
-// Zhihu: https://www.zhihu.com/people/netcan
+// Author: klinghui @ https://github.com/konglhui/Leetcode
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) 

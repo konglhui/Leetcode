@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# by netcan @ https://github.com/netcan/Leetcode-Rust
+# by netcan @ https://github.com/konglhui/Leetcode
 import requests, os
 import requests_cache
 import re, threading
@@ -13,16 +13,15 @@ from json.decoder import JSONDecodeError
 import json
 
 CODE_TEMPLATE = \
-"""// Author: Netcan @ https://github.com/netcan/Leetcode
-// Zhihu: https://www.zhihu.com/people/netcan
+"""// Author: klinghui @ https://github.com/konglhui/Leetcode
 {code}
 """
 
 REPO_README_TEMPLATE = """
 ## Leetcode-kLingHui
 本项目记录我的刷题过程。
-本项目由`crawler.py`生成，源代码在https://github.com/netcan/Leetcode-Rust/crawler.py
-代码自动爬取Leetcode-cn.com网站获取个人提交记录。使用方法：登陆Leetcode后记录cookie，设置环境变量`LEETCODE_COOKIE`，然后执行本脚本就能抓取指定语言的个人提交记录。
+本项目由`crawler.py`生成，源代码在 https://github.com/netcan/Leetcode-Rust/crawler.py
+代码自动爬取Leetcode-cn.com网站获取个人提交记录。使用方法：设置config.json，添加账号密码。
 目前已解决的题目（{solv_question_num} 个，其中简单{easy_num} 个，中等{medium_num} 个， 困难{hard_num} 个）：
 {solv_question_list}
 """
@@ -60,7 +59,6 @@ class Leetcode:
             temp = json.loads(f.read())
             username = temp['username']
             password = temp['password']
-            self.time_control = 3600*24*temp['time']
         self.client = requests.session()
         self.client.encodling = "utf-8"
         while True:
@@ -319,5 +317,3 @@ if __name__ == '__main__':
     subprocess.run(["git", "add", "."])
     subprocess.run(["git", "commit", "-m", "commit by crawler.py @Netcan at {}".format(datetime.now().strftime("%Y-%m-%d %H:%M"))])
     subprocess.run(["git", "push", "-f", "origin", "master"])
-
-
